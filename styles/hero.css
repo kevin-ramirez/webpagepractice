@@ -1,0 +1,72 @@
+.hero {
+    background: black;
+    background: linear-gradient(to right, #161616, black);
+    padding: 200px 0;
+    display: flex;
+    align-self: center;
+}
+
+.hero_container {
+    display: flex;
+    flex-direction:  column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto; /* makes it centered */
+    height: 90%;
+    text-align: center;
+    padding: 30px;
+}
+
+.hero_heading {
+    font-size: 100px;
+    margin-bottom: 24px;
+    color: white;
+}
+
+.hero_heading span {
+    background: #b92b27;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1565C0, #b92b27);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    /* Makes it so the coloring is only on the text and not the block around the text*/
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    
+    background-size: 100%;
+}
+
+.hero_description {
+    font-size: 60px;
+
+background: #1E9600;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FF0000, #FFF200, #1E9600);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FF0000, #FFF200, #1E9600); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    /* Makes it so the coloring is only on the text and not the block around the text*/
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    
+    background-size: 100%;
+
+}
+
+.highlight {
+    border-bottom: 4px solid rgb(132,0,255);
+}
+
+@media screen and (max-width: 786px) {
+    .hero_heading {
+        font-size: 60px;
+    }
+
+    .hero_description {
+        font-size: 40px;
+    }
+    
+}
