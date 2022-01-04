@@ -41,9 +41,9 @@
 .hero_description {
     font-size: 60px;
 
-background: #1E9600;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #FF0000, #FFF200, #1E9600);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #FF0000, #FFF200, #1E9600); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #1E9600;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FF0000, #FFF200, #1E9600);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF0000, #FFF200, #1E9600); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
     /* Makes it so the coloring is only on the text and not the block around the text*/
@@ -51,7 +51,7 @@ background: linear-gradient(to right, #FF0000, #FFF200, #1E9600); /* W3C, IE 10+
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
-    
+
     background-size: 100%;
 
 }
@@ -67,6 +67,215 @@ background: linear-gradient(to right, #FF0000, #FFF200, #1E9600); /* W3C, IE 10+
 
     .hero_description {
         font-size: 40px;
+    }
+    
+}
+
+/* About Section */
+.main {
+    background-color: #131313;
+    padding: 10rem 0;
+}
+
+.main_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* two boxes side by side */
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 90%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.main_content {
+    color: #fff;
+    width: 100%;
+}
+
+.main_content h1 {
+    font-size: 2rem;
+    /* Code taken from uigradients*/
+    background: #b92b27;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1565C0, #b92b27);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    /* When the text is displayed it make sures only the text color if filled in and not just a black out of the navbar*/
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+
+    text-transform: uppercase;
+    margin-bottom: 32px;
+}
+
+.main_content h2 {
+    font-size: 4rem;
+
+    background: #1E9600;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FF0000, #FFF200, #1E9600);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF0000, #FFF200, #1E9600); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    /* Makes it so the coloring is only on the text and not the block around the text*/
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+
+    background-size: 100%;
+}
+
+.main_content p {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.main_btn {
+    font-size: 1.8rem;
+    /* Code taken from uigradients*/
+    background: #b92b27;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1565C0, #b92b27);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    padding: 20px 60px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+
+.main_btn a {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-decoration: none;
+}
+
+/* Adds a slide over animation with the color in .main_btn:after */
+
+.main_btn:hover {
+    color: white;
+
+}
+
+.main_btn:hover::after {
+    width: 100%;
+}
+
+.main_btn:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%); /* Changes color from left to right*/
+    transition: all 0.35s;
+    border-radius: 4px;
+}
+
+.main_img_container {
+    text-align: center;
+}
+
+.main_img_card {
+    margin: 10px;
+    height: 500px;
+    width: 500px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%); /* Changes color from left to right*/
+}
+
+.fa-layer-group {
+    font-size: 14rem;
+}
+
+#card_2 {
+    /* Code taken from uigradients*/
+    background: #b92b27;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1565C0, #b92b27);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@media screen and (max-width: 1100px) {
+    .main_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90%;
+    }
+
+    .main_img_container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .main_img_card {
+        height: 425px;
+        width: 425px;
+    }
+
+    .main_content {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .main_content h1 {
+        font-size: 2.5rem;
+        margin-top: 4rem;
+    }
+
+    .main_content h2 {
+        font-size: 3rem;
+    }
+
+    .main_content p {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main_img_card {
+        width: 250px;
+        height: 250px;
+    }
+
+    .fa-layer-group {
+        font-size: 6rem;
+    }
+
+    .main_content h1 {
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+
+    .main_content h2 {
+        font-size: 2rem;
+    }
+
+    .main_content p {
+        margin-top: 2rem;
+    }
+
+    .main_btn {
+        padding: 12px 36px;
+        margin: 2.5rem 0;
     }
     
 }
